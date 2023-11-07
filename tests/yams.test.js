@@ -14,4 +14,10 @@ describe('Yams Game', () => {
   it('the dice suite is a Grande Suite', () => {
     expect(yamsGame([5, 4, 3, 2, 1])).toEqual(40);
   });
+  it('the dice suite is a YAMS', () => {
+    expect(yamsGame([5, 5, 5, 5, 5])).toEqual(50);
+  });
+  it('the dice suite is Chance', () => {
+    expect(yamsGame([2, 3, 5, 6, 1])).toEqual(17);
+  });
 });
