@@ -17,7 +17,15 @@ describe('Yams Game', () => {
   it('the dice suite is a YAMS', () => {
     expect(yamsGame([5, 5, 5, 5, 5])).toEqual(50);
   });
+  it('the dice suite is a YAMS', () => {
+    expect(yamsGame([4, 4, 4, 4, 4])).toEqual(50);
+  });
   it('the dice suite is Chance', () => {
     expect(yamsGame([2, 3, 5, 6, 1])).toEqual(17);
+  });
+  it('the roll dices are multiples', () => {
+    expect(yamsGame([2, 3, 5, 6, 1], [2, 3, 5, 2, 1], [2, 3, 4, 6, 5])).toEqual(
+      35
+    );
   });
 });
